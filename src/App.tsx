@@ -6,7 +6,14 @@ function App() {
     <>
       <Header />
       <div className="text-white">
-        <p className={cn("text-white", "p-5 text-lg")}>Hello Sprouts</p>
+        <p
+          className={cn(
+            "text-white font-bangers tracking-wider",
+            "p-5 text-lg"
+          )}
+        >
+          Hello Sprouts
+        </p>
       </div>
     </>
   );
