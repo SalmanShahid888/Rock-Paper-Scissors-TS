@@ -1,8 +1,10 @@
+import { cn } from "../lib/utils";
+
 function App() {
   return (
     <>
       <div className="text-white">
-        <p>Hello Sprouts</p>
+        <p className={cn("text-white", "p-5 text-lg")}>Hello Sprouts</p>
       </div>
     </>
   );
