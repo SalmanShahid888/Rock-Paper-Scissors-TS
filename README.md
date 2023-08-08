@@ -14,11 +14,15 @@ This Project is bootsrapped using [Vite](https://vitejs.dev/) and uses [React](h
 git clone https://github.com/SalmanShahid888/Rock-Paper-Scissors-TS
 ```
 
+&nbsp;
+
 #### Step 2: Change directory to project folder
 
 ```bash
 cd Rock-Paper-Scissors-TS
 ```
+
+&nbsp;
 
 #### Step 3: Install Dependencies
 
@@ -26,11 +30,15 @@ cd Rock-Paper-Scissors-TS
 npm install
 ```
 
+&nbsp;
+
 #### Step 4: Run the Project
 
 ```bash
 npm run dev
 ```
+
+&nbsp;
 
 ##### - You would now see a similar output in your terminal
 
@@ -48,7 +56,11 @@ npm run dev
 
 ##### - Navigate to `http://localhost:5173/` in your browser to view the project
 
+&nbsp;
+
 ---
+
+&nbsp;
 
 ## Vite Config Notes:
 
