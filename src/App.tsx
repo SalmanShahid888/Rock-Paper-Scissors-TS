@@ -10,7 +10,7 @@ function App() {
   const handlePlayerMode = (mode: string) => {
     console.log(mode);
     setPlayerChoice(mode);
-    navigate(`/start-game/${mode}`);
+    navigate(`/choose/${mode}`, { state: mode });
   };
   return (
     <>
