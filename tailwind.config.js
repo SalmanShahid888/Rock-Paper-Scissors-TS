@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bangers: ["Bangers", "sans-serif"],
+        bangers: ["Bangers", "cursive"],
         dmSans: ["DM Sans", "sans-serif"],
       },
     },
