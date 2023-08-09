@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "../components/ui/button";
 import { useLocation } from "react-router-dom";
 import { Header } from "../components/Header";
+import ModeSwitcher from "../components/ModeSwitcher";
 export const PlayerChoice = React.createContext("");
 const StartGame = () => {
   const [playerChoice, setPlayerChoice] = useState("");
@@ -11,7 +12,7 @@ const StartGame = () => {
     <>
       <PlayerChoice.Provider value={playerChoice}>
         <Header />
-        {playerChoice === "" && playerMode === "single-player" ? (
+        {playerChoice === "" ? (
           <>
             <p>Start Game</p>
             <Button
@@ -43,7 +44,7 @@ const StartGame = () => {
             </Button>
           </>
         ) : (
-          <p>Player Choice: {playerChoice}</p>
+          <ModeSwitcher playerChoice={playerChoice} playerMode={playerMode} />
         )}
       </PlayerChoice.Provider>
     </>
