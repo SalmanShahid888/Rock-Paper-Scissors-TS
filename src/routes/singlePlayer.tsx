@@ -7,6 +7,8 @@ import { Rock, Paper, Scissors } from "../components/SvgButtons";
 import { Button } from "../components/ui/button";
 import { useStore } from "../zustand/store";
 import { randomComputerChoice } from "../lib/utils";
+import { GameResult } from "../components/GameResult";
+
 const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
   const setPlayerChoice = useStore((store) => store.setPlayerChoice);
   const playerChoiceSvg = {
@@ -34,10 +36,7 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <GameResult
-            playerChoice={playerChoice}
-            computerChoice={computerChoice}
-          />
+          <GameResult choiceOne={playerChoice} choiceTwo={computerChoice} />
           <Button
             variant={"default"}
             className="text-black font-bold text-base bg-white hover:bg-white/80 mt-5"
@@ -65,25 +64,3 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
 };
 
 export default Singleplayer;
-
-function GameResult({
-  playerChoice,
-  computerChoice,
-}: {
-  playerChoice?: string;
-  computerChoice: string;
-}) {
-  const increaseScore = useStore((store) => store.increaseScore);
-  const result =
-    playerChoice === computerChoice
-      ? "It's a tie!"
-      : (playerChoice === "rock" && computerChoice === "scissors") ||
-        (playerChoice === "paper" && computerChoice === "rock") ||
-        (playerChoice === "scissors" && computerChoice === "paper")
-      ? "Player wins!"
-      : "Computer wins!";
-  if (result === "Player wins!") {
-    increaseScore();
-  }
-  return <p className="text-white">{result}</p>;
-}

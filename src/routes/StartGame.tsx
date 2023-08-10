@@ -7,16 +7,28 @@ const StartGame = () => {
   const playerChoice = useStore((store) => store.playerChoice);
   const playerMode = useStore((store) => store.playerMode);
   console.log(playerMode, playerChoice);
-  return (
-    <>
-      <Header />
-      {playerChoice === "" ? (
-        <Choose />
-      ) : (
+  if (
+    (playerMode === "singleplayer" || playerMode === "multiplayer") &&
+    playerChoice === ""
+  ) {
+    return (
+      <>
+        <Header />
+        {playerChoice === "" ? (
+          <Choose />
+        ) : (
+          <ModeSwitcher playerChoice={playerChoice} playerMode={playerMode} />
+        )}
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Header />
         <ModeSwitcher playerChoice={playerChoice} playerMode={playerMode} />
-      )}
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default StartGame;
