@@ -1,4 +1,7 @@
+import { useStore } from "../zustand/store";
+
 export const Header = () => {
+  const score = useStore((store) => store.score);
   return (
     <>
       <div className="flex justify-start px-60 mt-10">
@@ -10,7 +13,9 @@ export const Header = () => {
             <p className="text-blue-700 text-3xl font-black font-bangers">
               Score
             </p>
-            <p className="text-black font-black text-3xl font-bangers">0</p>
+            <p className="text-black font-black text-3xl font-bangers">
+              {score}
+            </p>
           </div>
         </div>
       </div>

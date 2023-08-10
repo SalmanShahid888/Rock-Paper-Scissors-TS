@@ -1,13 +1,17 @@
 import { FC } from "react";
-
 interface SinglePlayerProps {
   playerChoice?: string;
 }
 
 import { Rock, Paper, Scissors } from "../components/SvgButtons";
 import { Button } from "../components/ui/button";
+import { useStore } from "../zustand/store";
+import { useNavigate } from "react-router-dom";
 
 const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
+  const increaseScore = useStore((store) => store.increaseScore);
+  const setPlayerChoice = useStore((store) => store.setPlayerChoice);
+  const navigate = useNavigate();
   const playerChoiceSvg = {
     rock: <Rock />,
     paper: <Paper />,
@@ -21,6 +25,28 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
   };
 
   const computerChoice = generateComputerChoice();
+
+  const calculateWinner = () => {
+    if (playerChoice === computerChoice) {
+      return "It's a tie";
+    } else if (
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+      increaseScore();
+      return "You Win";
+    } else {
+      return "You Lose";
+    }
+  };
+
+  const playAgainHandler = () => {
+    setPlayerChoice("");
+    navigate("/startgame/choose");
+  };
+
+  console.log(calculateWinner());
 
   return (
     <>
@@ -47,7 +73,7 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           <Button
             variant={"default"}
             className="text-black font-bold text-base bg-white hover:bg-white/80 mt-5"
-            onClick={() => window.location.reload()}
+            onClick={playAgainHandler}
           >
             Play Again
           </Button>
