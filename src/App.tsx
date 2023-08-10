@@ -16,7 +16,7 @@ function App() {
     <>
       <PlayerMode.Provider value={playerChoice}>
         <div className="flex flex-col justify-center items-center">
-          <div className="flex flex-col justify-center items-center gap-16 mt-40">
+          <div className="flex flex-col justify-center items-center gap-16 mt-24">
             <h1 className="text-4xl font-dmSans font-black text-center text-white italic leading-loose">
               Welcome to <br /> Rock 👊 Paper ✋ and Scissors ✌
             </h1>
