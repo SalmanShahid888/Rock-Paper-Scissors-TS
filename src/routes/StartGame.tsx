@@ -6,7 +6,6 @@ import { Choose } from "./choose";
 const StartGame = () => {
   const playerChoice = useStore((store) => store.playerChoice);
   const playerMode = useStore((store) => store.playerMode);
-  console.log(playerMode, playerChoice);
   if (
     (playerMode === "singleplayer" || playerMode === "multiplayer") &&
     playerChoice === ""

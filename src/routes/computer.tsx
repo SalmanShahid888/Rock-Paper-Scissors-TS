@@ -1,6 +1,6 @@
 import { Button } from "../components/ui/button";
 import { Rock, Paper, Scissors } from "../components/SvgButtons";
-import { randomComputerChoice } from "../lib/utils";
+import { cn, randomComputerChoice } from "../lib/utils";
 import { useStore } from "../zustand/store";
 import { useState } from "react";
 
@@ -23,7 +23,7 @@ const Computer = () => {
           <h2 className="text-white font-black text-3xl font-dmSans">
             Robot X picked
           </h2>
-          <div className="mt-8">
+          <div className={cn("mt-8")}>
             {/* //TODO: Animate this */}
             {components[robot1Choice.toString() as keyof typeof components]}
           </div>

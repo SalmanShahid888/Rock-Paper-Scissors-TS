@@ -9,6 +9,19 @@ export default {
       },
       animation: {
         "bounce-once": "transform",
+        enteranceLeft: "enteranceLeft 0.5s ease-in-out",
+        enteranceRight: "enteranceRight 0.5s ease-in-out",
+        spin: "spin 1s linear once",
+      },
+      keyframes: {
+        enteranceLeft: {
+          "0%": { opacity: 0, transform: "translateX(-100%)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        enteranceRight: {
+          "0%": { opacity: 0, transform: "translateX(100%)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
       },
     },
   },

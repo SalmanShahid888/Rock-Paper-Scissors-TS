@@ -30,7 +30,7 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           <h2 className="text-white font-black text-3xl font-dmSans">
             Player picked
           </h2>
-          <div className="mt-8">
+          <div className="mt-8 animate-enteranceLeft animate-spin">
             {/* //TODO: Animate this */}
             {playerChoiceSvg[playerChoice as keyof typeof playerChoiceSvg]}
           </div>
@@ -49,7 +49,7 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           <h2 className="text-white font-black text-3xl font-dmSans">
             Computer picked
           </h2>
-          <div className="mt-8">
+          <div className="mt-8 animate-enteranceRight animate-spin">
             {/* //TODO: Animate this */}
             {
               playerChoiceSvg[
