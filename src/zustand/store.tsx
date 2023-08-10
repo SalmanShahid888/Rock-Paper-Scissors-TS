@@ -14,7 +14,6 @@ interface Store {
   playerTwoScore: number;
   setPlayerTwoScore: (score: number) => void;
 }
-
 const store = create<Store>((set) => ({
   playerMode: "",
   setPlayerMode: (mode: string) => set({ playerMode: mode }),
