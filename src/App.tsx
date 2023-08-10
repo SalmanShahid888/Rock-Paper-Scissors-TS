@@ -29,7 +29,7 @@ function App() {
               variant="outline"
               size="lg"
               className="text-lg text-white hover:bg-white hover:text-black font-dmSans px-[82px]"
-              onClick={() => handlePlayerMode("single-player")}
+              onClick={() => handlePlayerMode("singleplayer")}
             >
               🧑 Player Vs Computer 🤖
             </Button>
@@ -37,7 +37,7 @@ function App() {
               variant="outline"
               size="lg"
               className="text-lg text-white hover:bg-white hover:text-black font-dmSans px-[100px]"
-              onClick={() => handlePlayerMode("multi-player")}
+              onClick={() => handlePlayerMode("multiplayer")}
             >
               🧑 Player Vs Player 🧑
             </Button>
@@ -45,7 +45,7 @@ function App() {
               variant="outline"
               size="lg"
               className="text-lg text-white hover:bg-white hover:text-black font-dmSans px-16"
-              onClick={() => handlePlayerMode("computer-computer")}
+              onClick={() => handlePlayerMode("computer")}
             >
               🤖 Computer Vs Computer 🤖
             </Button>

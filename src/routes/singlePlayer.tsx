@@ -1,9 +1,15 @@
-const SinglePlayer = () => {
+import { FC } from "react";
+
+interface SinglePlayerProps {
+  playerChoice?: string;
+}
+
+const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
   return (
     <>
-      <p>Single Player</p>
+      <p>SinglePlayer Screen {playerChoice}</p>
     </>
   );
 };
 
-export default SinglePlayer;
+export default Singleplayer;

@@ -1,7 +1,13 @@
-const Multiplayer = () => {
+import { FC } from "react";
+
+interface MultiPlayerProps {
+  playerChoice?: string;
+}
+
+const Multiplayer: FC<MultiPlayerProps> = ({ playerChoice }) => {
   return (
     <>
-      <p>Selection Screen</p>
+      <p>MultiPlayer Screen {playerChoice}</p>
     </>
   );
 };

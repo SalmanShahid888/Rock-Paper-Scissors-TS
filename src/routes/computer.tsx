@@ -1,7 +1,7 @@
 const Computer = () => {
   return (
     <>
-      <p>Selection Screen</p>
+      <p>Computer Screen</p>
     </>
   );
 };

@@ -21,7 +21,7 @@ const router = createBrowserRouter(
     <>
       <Route index path="/" element={<App />} errorElement={<ErrorPage />} />
       <Route path="choose" element={<StartGame />}>
-        <Route path="single-player" element={<SinglePlayer />} />
+        <Route path="singleplayer" element={<SinglePlayer />} />
         <Route path="multiplayer" element={<Multiplayer />} />
         <Route path="computer" element={<Computer />} />
       </Route>
