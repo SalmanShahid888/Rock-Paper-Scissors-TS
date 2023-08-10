@@ -35,7 +35,15 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <p className="text-white">Result</p>
+          <p className="text-white">
+            {playerChoice === computerChoice
+              ? "It's a tie"
+              : (playerChoice === "rock" && computerChoice === "scissors") ||
+                (playerChoice === "paper" && computerChoice === "rock") ||
+                (playerChoice === "scissors" && computerChoice === "paper")
+              ? "You Win"
+              : "You Lose"}
+          </p>
           <Button
             variant={"default"}
             className="text-black font-bold text-base bg-white hover:bg-white/80 mt-5"
