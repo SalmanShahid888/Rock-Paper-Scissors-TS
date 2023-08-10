@@ -14,6 +14,14 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
     scissors: <Scissors />,
   };
 
+  const generateComputerChoice = () => {
+    const choices = ["rock", "paper", "scissors"];
+    const randomChoice = Math.floor(Math.random() * choices.length);
+    return choices[randomChoice];
+  };
+
+  const computerChoice = generateComputerChoice();
+
   return (
     <>
       <div className="flex flex-row gap-40 justify-center items-center mt-20">
@@ -41,7 +49,11 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           </h2>
           <div className="mt-8">
             {/* //TODO: Animate this */}
-            {playerChoiceSvg["scissors"]}
+            {
+              playerChoiceSvg[
+                computerChoice.toString() as keyof typeof playerChoiceSvg
+              ]
+            }
           </div>
         </div>
       </div>
