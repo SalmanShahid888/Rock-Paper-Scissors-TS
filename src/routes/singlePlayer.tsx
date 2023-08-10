@@ -7,7 +7,9 @@ interface SinglePlayerProps {
 const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
   return (
     <>
-      <p>SinglePlayer Screen {playerChoice}</p>
+      <div className="flex flex-row gap-5 justify-center items-center">
+        {playerChoice}
+      </div>
     </>
   );
 };

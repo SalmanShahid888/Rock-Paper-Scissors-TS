@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -5,6 +6,9 @@ export default {
       fontFamily: {
         bangers: ["Bangers", "cursive"],
         dmSans: ["DM Sans", "sans-serif"],
+      },
+      animation: {
+        "bounce-once": "transform",
       },
     },
   },
