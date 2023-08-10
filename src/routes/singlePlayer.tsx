@@ -47,6 +47,7 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           <Button
             variant={"default"}
             className="text-black font-bold text-base bg-white hover:bg-white/80 mt-5"
+            onClick={() => window.location.reload()}
           >
             Play Again
           </Button>
