@@ -15,13 +15,11 @@ import SinglePlayer from "./routes/singlePlayer.tsx";
 import Multiplayer from "./routes/multiPlayer.tsx";
 import Computer from "./routes/computer.tsx";
 import StartGame from "./routes/StartGame.tsx";
-import { Choose } from "./routes/choose.tsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route index path="/" element={<App />} errorElement={<ErrorPage />} />
       <Route path="startgame" element={<StartGame />}>
-        <Route path="choose" element={<Choose />} />
         <Route path="singleplayer" element={<SinglePlayer />} />
         <Route path="multiplayer" element={<Multiplayer />} />
         <Route path="computer" element={<Computer />} />
