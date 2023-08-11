@@ -10,9 +10,9 @@ export const Header = () => {
   if (playerMode === "singleplayer" || playerMode === "computer") {
     return (
       <>
-        <div className="flex justify-center flex-row px-60 mt-10">
-          <div className="flex flex-row justify-between h-40 w-full border-white border-2 rounded-3xl p-5">
-            <div className="flex flex-col bg-white rounded-lg h-28 w-28 mr-5 justify-between items-center py-4">
+        <div className="flex justify-center flex-row md:px-60 mt-10">
+          <div className="flex flex-row justify-between h-40 w-full border-white border-2 rounded-3xl md:p-5 pt-5">
+            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 md:mr-5 ml-4 md:ml-0 justify-between items-center py-4">
               <p className="text-blue-700 text-3xl font-black font-bangers">
                 Score
               </p>
@@ -23,7 +23,7 @@ export const Header = () => {
             <h2 className="font-bangers text-white text-4xl font-bold text-center">
               Rock <br /> Paper <br /> Scissors
             </h2>
-            <div className="flex flex-col bg-white rounded-lg h-28 w-28 mr-5 justify-between items-center py-4">
+            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 mr-5 justify-between items-center py-4">
               <p className="text-blue-700 text-3xl font-black font-bangers">
                 Score
               </p>
@@ -33,11 +33,11 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="md:relative mt-5 flex justify-center items-center">
           <Button
             variant={"outline"}
             size={"sm"}
-            className="text-white bg-red-600 hover:border-none hover:bg-red-600/70 absolute right-16 bottom-28 transition-all duration-500 ease-in-out"
+            className="text-white bg-red-600 hover:border-none hover:bg-red-600/70 md:absolute md:right-16 md:bottom-28 right-40 top-4 md:top-auto transition-all duration-500 ease-in-out"
             onClick={() => {
               window.location.href = "/";
             }}
@@ -50,9 +50,9 @@ export const Header = () => {
   } else if (playerMode === "multiplayer") {
     return (
       <>
-        <div className="flex justify-center flex-row px-60 mt-10">
-          <div className="flex flex-row justify-between h-40 w-full border-white border-2 rounded-3xl p-5">
-            <div className="flex flex-col bg-white rounded-lg h-28 w-28 mr-5 justify-between items-center py-4">
+        <div className="flex justify-center md:flex-row flex-col md:px-60 mt-10">
+          <div className="flex flex-row justify-between h-40 w-full border-white border-2 rounded-3xl md:p-5 pt-5">
+            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 md:mr-5 ml-4 md:ml-0 justify-between items-center py-4">
               <p className="text-blue-700 text-3xl font-black font-bangers">
                 Score
               </p>
@@ -63,7 +63,7 @@ export const Header = () => {
             <h2 className="font-bangers text-white text-4xl font-bold text-center">
               Rock <br /> Paper <br /> Scissors
             </h2>
-            <div className="flex flex-col bg-white rounded-lg h-28 w-28 mr-5 justify-between items-center py-4">
+            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 mr-5 justify-between items-center py-4">
               <p className="text-blue-700 text-3xl font-black font-bangers">
                 Score
               </p>
@@ -73,11 +73,11 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="md:relative mt-5 flex justify-center items-center md:mt-0">
           <Button
             variant={"outline"}
             size={"sm"}
-            className="text-white bg-red-600 hover:border-none hover:bg-red-600/70 absolute right-16 bottom-28 transition-all duration-500 ease-in-out"
+            className="text-white bg-red-600 hover:border-none hover:bg-red-600/70 md:absolute md:right-16 md:bottom-28 right-40 top-4 md:top-auto transition-all duration-500 ease-in-out"
             onClick={() => {
               window.location.href = "/";
             }}
