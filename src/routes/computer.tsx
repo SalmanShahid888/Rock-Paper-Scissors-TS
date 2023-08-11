@@ -23,7 +23,12 @@ const Computer = () => {
           <h2 className="text-white font-black text-3xl font-dmSans">
             Robot X picked
           </h2>
-          <div className={cn("mt-8")}>
+          <div
+            className={cn(
+              "mt-8",
+              !render ? "animate-enteranceRight" : "animate-enteranceLeft"
+            )}
+          >
             {/* //TODO: Animate this */}
             {components[robot1Choice.toString() as keyof typeof components]}
           </div>
@@ -44,7 +49,12 @@ const Computer = () => {
           <h2 className="text-white font-black text-3xl font-dmSans">
             Robot Y picked
           </h2>
-          <div className="mt-8">
+          <div
+            className={cn(
+              "mt-8",
+              !render ? "animate-enteranceLeft" : "animate-enteranceRight"
+            )}
+          >
             {/* //TODO: Animate this */}
             {components[robot2Choice.toString() as keyof typeof components]}
           </div>
