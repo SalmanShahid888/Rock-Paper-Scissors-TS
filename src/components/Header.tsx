@@ -10,7 +10,7 @@ export const Header = () => {
   if (playerMode === "singleplayer" || playerMode === "computer") {
     return (
       <>
-        <div className="flex justify-center flex-row md:px-60 mt-10">
+        <div className="flex justify-center flex-row md:px-60 md:mt-10">
           <div className="flex flex-row justify-between h-40 w-full border-white border-2 rounded-3xl md:p-5 pt-5">
             <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 md:mr-5 ml-4 md:ml-0 justify-between items-center py-4">
               <p className="text-blue-700 text-3xl font-black font-bangers">
