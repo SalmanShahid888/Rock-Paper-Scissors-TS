@@ -19,7 +19,7 @@ const ModeSwitcher: FC<ModeSwitcherProps> = ({ playerMode, playerChoice }) => {
     case "multiplayer":
       return (
         <>
-          <Multiplayer playerChoice={playerChoice} />
+          <Multiplayer />
         </>
       );
     case "computer":
