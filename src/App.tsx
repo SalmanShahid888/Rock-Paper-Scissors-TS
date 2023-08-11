@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center gap-16 mt-24">
+        <div className="flex flex-col justify-center items-center gap-16 md:mt-24">
           <h1 className="text-4xl font-dmSans font-black text-center text-white italic leading-loose">
             Welcome to <br /> Rock 👊 Paper ✋ and Scissors ✌
           </h1>
@@ -25,7 +25,7 @@ function App() {
           <Button
             variant="outline"
             size="lg"
-            className="text-lg text-white hover:bg-white hover:text-black font-dmSans px-[82px]"
+            className="text-lg text-white hover:bg-white hover:text-black font-dmSans md:px-[82px] px-4"
             onClick={() => handlePlayerMode("singleplayer")}
           >
             🧑 Player Vs Computer 🤖
@@ -33,7 +33,7 @@ function App() {
           <Button
             variant="outline"
             size="lg"
-            className="text-lg text-white hover:bg-white hover:text-black font-dmSans px-[100px]"
+            className="text-lg text-white hover:bg-white hover:text-black font-dmSans md:px-[100px] px-9"
             onClick={() => handlePlayerMode("multiplayer")}
           >
             🧑 Player Vs Player 🧑
@@ -41,7 +41,7 @@ function App() {
           <Button
             variant="outline"
             size="lg"
-            className="text-lg text-white hover:bg-white hover:text-black font-dmSans px-16"
+            className="text-lg text-white hover:bg-white hover:text-black font-dmSans md:px-16 px-0"
             onClick={() => handlePlayerMode("computer")}
           >
             🤖 Computer Vs Computer 🤖
