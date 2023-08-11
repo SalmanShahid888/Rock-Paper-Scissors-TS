@@ -8,11 +8,11 @@ export const Choose = () => {
     playerChoice(choice);
   };
   return (
-    <div className="flex flex-col mt-20 justify-center items-center gap-20">
+    <div className="flex flex-col md:mt-20 mt-10 justify-center items-center md:gap-20 gap-5">
       <h2 className="font-bold text-4xl font-dmSans text-white uppercase text-center">
         pick your choice
       </h2>
-      <div className="w-full flex flex-row justify-center items-center mt-10">
+      <div className="w-full flex md:flex-row flex-col justify-center items-center mt-10 gap-32 md:gap-0">
         <Button
           size={"lg"}
           onClick={() => {
@@ -22,7 +22,7 @@ export const Choose = () => {
         >
           <Rock />
         </Button>
-        <div className="bg-purple-950/30 h-4 w-32"></div>
+        <div className="bg-purple-950/30 md:h-4 md:w-32 hidden md:block"></div>
         <Button
           size={"lg"}
           onClick={() => {
@@ -32,7 +32,7 @@ export const Choose = () => {
         >
           <Paper />
         </Button>
-        <div className="bg-purple-950/30 h-4 w-32"></div>
+        <div className="bg-purple-950/30 md:h-4 md:w-32 hidden md:block"></div>
         <Button
           size={"lg"}
           onClick={() => {
