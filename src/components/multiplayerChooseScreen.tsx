@@ -31,7 +31,7 @@ export const MultiPlayerChooseScreen = () => {
           onClick={() => {
             handleChoice("rock", turn);
           }}
-          className="hover:-translate-x-2 hover:-translate-y-2 transition-all p-0"
+          className="transition-all p-0"
         >
           <Rock />
         </Button>
@@ -41,7 +41,7 @@ export const MultiPlayerChooseScreen = () => {
           onClick={() => {
             handleChoice("paper", turn);
           }}
-          className="hover:-translate-x-2 hover:-translate-y-2 transition-all p-0"
+          className="transition-all p-0"
         >
           <Paper />
         </Button>
@@ -51,7 +51,7 @@ export const MultiPlayerChooseScreen = () => {
           onClick={() => {
             handleChoice("scissors", turn);
           }}
-          className="hover:-translate-x-2 hover:-translate-y-2 transition-all p-0"
+          className="transition-all p-0"
         >
           <Scissors />
         </Button>
