@@ -18,7 +18,7 @@ export const Choose = () => {
           onClick={() => {
             handleChoice("rock");
           }}
-          className="hover:-translate-x-2 hover:-translate-y-2 transition-all p-0"
+          className="hover:translate-x-2 hover:-translate-y-2 transition-all p-0"
         >
           <Rock />
         </Button>
@@ -28,7 +28,7 @@ export const Choose = () => {
           onClick={() => {
             handleChoice("paper");
           }}
-          className="hover:-translate-x-2 hover:-translate-y-2 transition-all p-0"
+          className="hover:translate-y-2 transition-all p-0"
         >
           <Paper />
         </Button>
