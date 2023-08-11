@@ -28,5 +28,5 @@ export function GameResult({
       "Game Result neither resulted in Player wins nor Computer wins"
     );
   }
-  return <p className="text-white">{result}</p>;
+  return <p className="text-white text-xl md:text-base">{result}</p>;
 }

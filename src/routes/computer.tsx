@@ -92,5 +92,5 @@ function GameResult({
       "Game Result neither resulted in Robot X wins nor Robot Y wins"
     );
   }
-  return <p className="text-white">{result}</p>;
+  return <p className="text-white text-xl md:text-lg">{result}</p>;
 }

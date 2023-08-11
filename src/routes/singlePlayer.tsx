@@ -25,12 +25,12 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
 
   return (
     <>
-      <div className="flex flex-row gap-40 justify-center items-center mt-20">
-        <div className="flex flex-col justify-between items-center">
+      <div className="flex md:flex-row flex-col md:gap-40 gap-10 justify-center items-center md:mt-20 mt-10">
+        <div className="flex flex-col justify-between items-center gap-5 md:gap-0">
           <h2 className="text-white font-black text-3xl font-dmSans">
-            Player picked
+            You Picked
           </h2>
-          <div className="mt-8 animate-enteranceLeft animate-spin">
+          <div className="md:mt-8 animate-enteranceLeft animate-spin">
             {/* //TODO: Animate this */}
             {playerChoiceSvg[playerChoice as keyof typeof playerChoiceSvg]}
           </div>
@@ -45,11 +45,11 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
             Play Again
           </Button>
         </div>
-        <div className="flex flex-col justify-between items-center">
-          <h2 className="text-white font-black text-3xl font-dmSans">
-            Computer picked
+        <div className="flex md:flex-col flex-col-reverse justify-between items-center gap-4">
+          <h2 className="text-white font-black text-3xl font-dmSans text-center">
+            Robot X Picked
           </h2>
-          <div className="mt-8 animate-enteranceRight animate-spin">
+          <div className="md:mt-8 animate-enteranceRight animate-spin">
             {/* //TODO: Animate this */}
             {
               playerChoiceSvg[
