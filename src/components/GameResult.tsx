@@ -13,7 +13,7 @@ export function GameResult({
   const increaseRobotXScore = useStore((store) => store.increaseRobotXScore);
   const result =
     choiceOne === choiceTwo
-      ? "It's a tie!"
+      ? "Draw!"
       : (choiceOne === "rock" && choiceTwo === "scissors") ||
         (choiceOne === "paper" && choiceTwo === "rock") ||
         (choiceOne === "scissors" && choiceTwo === "paper")
