@@ -43,11 +43,11 @@
 
 1. Testing and Deployment checklist.
 
-- [] Test the Functionality of the Game
-- [] Test the Functionality of the Scoreboard
-- [] Test the Functionality of the Exit Button
-- [] Test the Functionality of the Random Computer Pick
-- [] Test the Functionality of the Player Pick
+- [x] Test the Functionality of the Game
+- [x] Test the Functionality of the Scoreboard
+- [x] Test the Functionality of the Exit Button
+- [x] Test the Functionality of the Random Computer Pick
+- [x] Test the Functionality of the Player Pick
 
 2. Animations on Win, Lose and Draw (Maybe use a Popper.js or something)
 
