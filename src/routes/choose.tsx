@@ -22,7 +22,7 @@ export const Choose = () => {
         >
           <Rock />
         </Button>
-        <div className="bg-purple-950/30 md:h-4 md:w-32 hidden md:block"></div>
+        <div className="bg-[#181A20] md:h-4 md:w-32 hidden md:block"></div>
         <Button
           size={"lg"}
           onClick={() => {
@@ -32,7 +32,7 @@ export const Choose = () => {
         >
           <Paper />
         </Button>
-        <div className="bg-purple-950/30 md:h-4 md:w-32 hidden md:block"></div>
+        <div className="bg-[#181A20] md:h-4 md:w-32 hidden md:block"></div>
         <Button
           size={"lg"}
           onClick={() => {
