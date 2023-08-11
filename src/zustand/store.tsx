@@ -26,6 +26,7 @@ const store = create<Store>((set) => ({
   robotYScore: 0,
   setPlayerMode: (mode: string) => set({ playerMode: mode }),
   setPlayerChoice: (choice: string) => set({ playerChoice: choice }),
+  setPlayerTwoChoice: (choice: string) => set({ playerTwoChoice: choice }),
   increasePlayerOneScore: () =>
     set((state) => {
       return {
@@ -54,7 +55,6 @@ const store = create<Store>((set) => ({
         robotYScore: state.robotYScore + 1,
       };
     }),
-  setPlayerTwoChoice: (choice: string) => set({ playerTwoChoice: choice }),
 }));
 
 export const useStore = store;

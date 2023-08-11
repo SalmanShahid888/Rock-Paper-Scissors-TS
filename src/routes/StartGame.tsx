@@ -6,10 +6,7 @@ import { Choose } from "./choose";
 const StartGame = () => {
   const playerChoice = useStore((store) => store.playerChoice);
   const playerMode = useStore((store) => store.playerMode);
-  if (
-    (playerMode === "singleplayer" || playerMode === "multiplayer") &&
-    playerChoice === ""
-  ) {
+  if (playerMode === "singleplayer" && playerChoice === "") {
     return (
       <>
         <Header />
