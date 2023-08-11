@@ -2,7 +2,11 @@ import { useStore } from "../zustand/store";
 import { Button } from "./ui/button";
 
 export const Header = () => {
-  const score = useStore((store) => store.score);
+  const playerMode = useStore((store) => store.playerMode);
+  const playerOneScore = useStore((store) => store.playerOneScore);
+  //const playerTwoScore = useStore((store) => store.playerTwoScore);
+  const robotXScore = useStore((store) => store.robotXScore);
+  const robotYScore = useStore((store) => store.robotYScore);
   return (
     <>
       <div className="flex justify-center flex-row px-60 mt-10">
@@ -12,7 +16,7 @@ export const Header = () => {
               Score
             </p>
             <p className="text-black font-black text-3xl font-bangers">
-              {score}
+              {playerMode === "singleplayer" ? playerOneScore : robotXScore}
             </p>
           </div>
           <h2 className="font-bangers text-white text-4xl font-bold text-center">
@@ -23,7 +27,7 @@ export const Header = () => {
               Score
             </p>
             <p className="text-black font-black text-3xl font-bangers">
-              {score}
+              {playerMode === "singleplayer" ? robotXScore : robotYScore}
             </p>
           </div>
         </div>

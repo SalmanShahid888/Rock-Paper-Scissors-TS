@@ -7,7 +7,10 @@ export function GameResult({
   choiceOne?: string;
   choiceTwo: string;
 }) {
-  const increaseScore = useStore((store) => store.increaseScore);
+  const increasePlayerOneScore = useStore(
+    (store) => store.increasePlayerOneScore
+  );
+  const increaseRobotXScore = useStore((store) => store.increaseRobotXScore);
   const result =
     choiceOne === choiceTwo
       ? "It's a tie!"
@@ -17,7 +20,13 @@ export function GameResult({
       ? "Player wins!"
       : "Computer wins!";
   if (result === "Player wins!") {
-    increaseScore();
+    increasePlayerOneScore();
+  } else if (result === "Computer wins!") {
+    increaseRobotXScore();
+  } else {
+    console.log(
+      "Game Result neither resulted in Player wins nor Computer wins"
+    );
   }
   return <p className="text-white">{result}</p>;
 }

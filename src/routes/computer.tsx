@@ -63,7 +63,8 @@ function GameResult({
   choiceOne?: string;
   choiceTwo: string;
 }) {
-  const increaseScore = useStore((store) => store.increaseScore);
+  const increaseRobotXScore = useStore((store) => store.increaseRobotXScore);
+  const increaseRobotYScore = useStore((store) => store.increaseRobotYScore);
   const result =
     choiceOne === choiceTwo
       ? "Draw!"
@@ -73,7 +74,13 @@ function GameResult({
       ? "Robot X wins!"
       : "Robot Y wins!";
   if (result === "Robot X wins!") {
-    increaseScore();
+    increaseRobotXScore();
+  } else if (result === "Robot Y wins!") {
+    increaseRobotYScore();
+  } else {
+    console.log(
+      "Game Result neither resulted in Robot X wins nor Robot Y wins"
+    );
   }
   return <p className="text-white">{result}</p>;
 }
