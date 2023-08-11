@@ -6,6 +6,12 @@ This Project is part of Techincal Interview Task for [Sprouts.ai](https://sprout
 
 This Project is bootsrapped using [Vite](https://vitejs.dev/) and uses [React](https://reactjs.org/) as a Frontend Library and [TypeScript](https://www.typescriptlang.org/). It also uses [TailwindCSS](https://tailwindcss.com/) for styling.
 
+## Live Demo:
+
+```bash
+https://rock-paper-scissors-ts.vercel.app/
+```
+
 # Installation
 
 #### Step 1: Clone the Repository
@@ -55,6 +61,25 @@ npm run dev
 ```
 
 ##### - Navigate to `http://localhost:5173/` in your browser to view the project
+
+<mark>Development Environment Note:</mark>
+
+In Development Environment, Score updates two times adding 2 to score, This is not a bug and can be fixed by removing react strict mode from `main.tsx` file.
+
+```ts
+<React.StrictMode>//</React.StrictMode>
+```
+
+&nbsp;
+
+# How to Play:
+
+- Select the Game Mode
+- Choose Your Pick
+  `Rock` `Paper` `Scissors`
+- If you Win your scores will get updated on Left Side
+- If you Lose your scores will get updated on Right Side
+- Based on your Game mode your opponent will be either Computer or another Player.
 
 &nbsp;
 
