@@ -36,7 +36,7 @@ export const Header = () => {
         <Button
           variant={"outline"}
           size={"sm"}
-          className="text-white hover:bg-red-600 hover:border-none absolute right-16 bottom-28 transition-colors duration-500 ease-in-out"
+          className="text-white bg-red-600 hover:border-none hover:bg-red-600/70 absolute right-16 bottom-28 transition-all duration-500 ease-in-out"
           onClick={() => {
             window.location.href = "/";
           }}
