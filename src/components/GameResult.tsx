@@ -18,10 +18,10 @@ export function GameResult({
         (choiceOne === "paper" && choiceTwo === "rock") ||
         (choiceOne === "scissors" && choiceTwo === "paper")
       ? "Player wins!"
-      : "Computer wins!";
+      : "Robot wins!";
   if (result === "Player wins!") {
     increasePlayerOneScore();
-  } else if (result === "Computer wins!") {
+  } else if (result === "Robot wins!") {
     increaseRobotXScore();
   } else {
     console.log(
