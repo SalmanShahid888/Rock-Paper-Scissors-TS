@@ -2,24 +2,27 @@ import { create } from "zustand";
 
 interface Store {
   playerMode: string;
-  setPlayerMode: (mode: string) => void;
   playerChoice: string;
-  setPlayerChoice: (choice: string) => void;
   score: number;
-  increaseScore: () => void;
   playerTwoChoice: string;
-  setPlayerTwoChoice: (choice: string) => void;
   playerOneScore: number;
-  setPlayerOneScore: (score: number) => void;
   playerTwoScore: number;
+  setPlayerMode: (mode: string) => void;
+  setPlayerChoice: (choice: string) => void;
+  increaseScore: () => void;
+  setPlayerTwoChoice: (choice: string) => void;
+  setPlayerOneScore: (score: number) => void;
   setPlayerTwoScore: (score: number) => void;
 }
 const store = create<Store>((set) => ({
   playerMode: "",
-  setPlayerMode: (mode: string) => set({ playerMode: mode }),
   playerChoice: "",
-  setPlayerChoice: (choice: string) => set({ playerChoice: choice }),
   score: 0,
+  playerTwoChoice: "",
+  playerOneScore: 0,
+  playerTwoScore: 0,
+  setPlayerMode: (mode: string) => set({ playerMode: mode }),
+  setPlayerChoice: (choice: string) => set({ playerChoice: choice }),
   increaseScore: () =>
     set((state) => {
       return {
@@ -27,11 +30,8 @@ const store = create<Store>((set) => ({
         score: state.score + 1,
       };
     }),
-  playerTwoChoice: "",
   setPlayerTwoChoice: (choice: string) => set({ playerTwoChoice: choice }),
-  playerOneScore: 0,
   setPlayerOneScore: (score: number) => set({ playerOneScore: score }),
-  playerTwoScore: 0,
   setPlayerTwoScore: (score: number) => set({ playerTwoScore: score }),
 }));
 
