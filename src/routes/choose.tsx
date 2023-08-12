@@ -12,7 +12,7 @@ export const Choose = () => {
       <h2 className="font-bold text-4xl font-dmSans text-white uppercase text-center">
         pick your choice
       </h2>
-      <div className="w-full flex md:flex-row flex-col justify-center items-center mt-10 gap-32 md:gap-0">
+      <div className="w-full flex flex-row flex-wrap justify-center items-center mt-10 gap-20 md:gap-0">
         <Button
           size={"lg"}
           onClick={() => {

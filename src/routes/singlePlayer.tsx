@@ -27,7 +27,7 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
     <>
       <div className="flex md:flex-row flex-col md:gap-40 gap-10 justify-center items-center md:mt-20 mt-10">
         <div className="flex flex-col justify-between items-center gap-5 md:gap-0">
-          <h2 className="text-white font-black text-3xl font-dmSans">
+          <h2 className="text-white font-black md:text-3xl text-xl font-dmSans">
             You Picked
           </h2>
           <div className="md:mt-8 animate-enteranceLeft animate-spin">
@@ -46,7 +46,7 @@ const Singleplayer: FC<SinglePlayerProps> = ({ playerChoice }) => {
           </Button>
         </div>
         <div className="flex md:flex-col flex-col-reverse justify-between items-center gap-4">
-          <h2 className="text-white font-black text-3xl font-dmSans text-center">
+          <h2 className="text-white font-black md:text-3xl text-xl font-dmSans text-center">
             Robot X Picked
           </h2>
           <div className="md:mt-8 animate-enteranceRight animate-spin">

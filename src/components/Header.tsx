@@ -11,20 +11,20 @@ export const Header = () => {
     return (
       <>
         <div className="flex justify-center flex-row md:px-60 md:mt-10">
-          <div className="flex flex-row justify-between h-40 w-full border-white border-2 rounded-3xl md:p-5 pt-5">
-            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 md:mr-5 ml-4 md:ml-0 justify-between items-center py-4">
-              <p className="text-blue-700 text-3xl font-black font-bangers">
+          <div className="flex flex-row justify-between md:h-40 h-32 w-full border-white border-2 rounded-3xl md:p-5 pt-3">
+            <div className="flex flex-col bg-white rounded-lg md:h-28 h-24 md:w-28 w-24 md:mr-5 ml-4 md:ml-0 justify-between items-center py-4">
+              <p className="text-blue-700 md:text-3xl text-xl font-black font-bangers">
                 {playerMode === "singleplayer" ? "Player" : "Robot X"}
               </p>
               <p className="text-black font-black text-3xl font-bangers">
                 {playerMode === "singleplayer" ? playerOneScore : robotXScore}
               </p>
             </div>
-            <h2 className="font-bangers text-white text-4xl font-bold text-center">
+            <h2 className="font-bangers text-white md:text-4xl text-2xl font-bold text-center">
               Rock <br /> Paper <br /> Scissors
             </h2>
-            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 mr-5 justify-between items-center py-4">
-              <p className="text-blue-700 text-3xl font-black font-bangers">
+            <div className="flex flex-col bg-white rounded-lg md:h-28 h-24 md:w-28 w-24 mr-5 justify-between items-center py-4">
+              <p className="text-red-700 md:text-3xl text-xl font-black font-bangers">
                 {playerMode === "singleplayer" ? "Robot X" : "Robot Y"}
               </p>
               <p className="text-black font-black text-3xl font-bangers">
@@ -51,20 +51,20 @@ export const Header = () => {
     return (
       <>
         <div className="flex justify-center md:flex-row flex-col md:px-60 md:mt-10">
-          <div className="flex flex-row justify-between h-40 w-full border-white border-2 rounded-3xl md:p-5 pt-5">
-            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 md:mr-5 ml-4 md:ml-0 justify-between items-center py-4">
-              <p className="text-blue-700 text-3xl font-black font-bangers">
+          <div className="flex flex-row justify-between md:h-40 h-32 w-full border-white border-2 rounded-3xl md:p-5 pt-3">
+            <div className="flex flex-col bg-white rounded-lg md:h-28 h-24 md:w-28 w-24 md:mr-5 ml-4 md:ml-0 justify-between items-center py-4">
+              <p className="text-blue-700 md:text-3xl text-xl font-black font-bangers">
                 Player 1
               </p>
               <p className="text-black font-black text-3xl font-bangers">
                 {playerOneScore}
               </p>
             </div>
-            <h2 className="font-bangers text-white text-4xl font-bold text-center">
+            <h2 className="font-bangers text-white md:text-4xl text-2xl font-bold text-center">
               Rock <br /> Paper <br /> Scissors
             </h2>
-            <div className="flex flex-col bg-white rounded-lg h-28 md:w-28 w-24 mr-5 justify-between items-center py-4">
-              <p className="text-blue-700 text-3xl font-black font-bangers">
+            <div className="flex flex-col bg-white rounded-lg md:h-28 h-24 md:w-28 w-24 mr-5 justify-between items-center py-4">
+              <p className="text-blue-700 md:text-3xl text-xl font-black font-bangers">
                 Player 2
               </p>
               <p className="text-black font-black text-3xl font-bangers">

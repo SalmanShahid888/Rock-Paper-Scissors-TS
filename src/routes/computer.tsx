@@ -20,7 +20,7 @@ const Computer = () => {
     <>
       <div className="flex md:flex-row flex-col md:gap-40 gap-10 justify-center items-center md:mt-20 mt-10">
         <div className="flex flex-col justify-between items-center gap-5 md:gap-0">
-          <h2 className="text-white font-black text-3xl font-dmSans">
+          <h2 className="text-white font-black md:text-3xl text-xl font-dmSans">
             Robot X picked
           </h2>
           <div
@@ -46,7 +46,7 @@ const Computer = () => {
           </Button>
         </div>
         <div className="flex md:flex-col flex-col-reverse justify-between items-center gap-4">
-          <h2 className="text-white font-black text-3xl font-dmSans">
+          <h2 className="text-white font-black md:text-3xl text-xl font-dmSans">
             Robot Y picked
           </h2>
           <div

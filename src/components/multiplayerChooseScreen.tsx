@@ -20,12 +20,12 @@ export const MultiPlayerChooseScreen = () => {
   const playerOneChoice = useStore((store) => store.playerChoice);
   return (
     <div className="flex flex-col md:mt-20 mt-10 justify-center items-center md:gap-20 gap-5">
-      <h2 className="font-bold text-4xl font-dmSans text-white uppercase text-center">
+      <h2 className="font-bold md:text-4xl text-xl font-dmSans text-white uppercase text-center">
         {playerOneChoice === ""
           ? "Player One Choose ..."
           : "Player Two Choose ..."}
       </h2>
-      <div className="w-full flex md:flex-row flex-col justify-center items-center mt-10 gap-32 md:gap-0">
+      <div className="w-full flex flex-row flex-wrap justify-center items-center mt-10 gap-20 md:gap-0">
         <Button
           size={"lg"}
           onClick={() => {
