@@ -1,5 +1,5 @@
 import { useStore } from "../zustand/store";
-
+import ConfettiExplosion from "confetti-explosion-react";
 export function GameResult({
   choiceOne,
   choiceTwo,
@@ -28,5 +28,12 @@ export function GameResult({
       "Game Result neither resulted in Player wins nor Computer wins"
     );
   }
-  return <p className="text-white text-xl md:text-base">{result}</p>;
+  return (
+    <>
+      <p className="text-white text-xl md:text-base">{result}</p>
+      {result !== "Draw!" && result !== "Robot wins!" && (
+        <ConfettiExplosion particleCount={30} particleSize={3} />
+      )}
+    </>
+  );
 }

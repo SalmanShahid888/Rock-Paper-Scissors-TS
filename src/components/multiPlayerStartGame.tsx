@@ -7,6 +7,7 @@ interface MultiPlayerStartGameProps {
 import { Rock, Paper, Scissors } from "../components/SvgButtons";
 import { Button } from "../components/ui/button";
 import { useStore } from "../zustand/store";
+import ConfettiExplosion from "confetti-explosion-react";
 const MultiPlayerStartGame: FC<MultiPlayerStartGameProps> = ({
   playerOneChoice,
   playerTwoChoice,
@@ -91,5 +92,12 @@ function GameResult({
       "Game Result neither resulted in Player wins nor Computer wins"
     );
   }
-  return <p className="text-white text-xl md:text-lg">{result}</p>;
+  return (
+    <>
+      <p className="text-white text-xl md:text-lg">{result}</p>;
+      {result !== "Draw!" && (
+        <ConfettiExplosion particleCount={30} particleSize={3} />
+      )}
+    </>
+  );
 }

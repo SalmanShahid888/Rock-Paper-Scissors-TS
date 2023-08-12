@@ -3,6 +3,7 @@ import { Rock, Paper, Scissors } from "../components/SvgButtons";
 import { cn, randomComputerChoice } from "../lib/utils";
 import { useStore } from "../zustand/store";
 import { useState } from "react";
+import ConfettiExplosion from "confetti-explosion-react";
 
 const Computer = () => {
   const [render, setRender] = useState(false);
@@ -92,5 +93,12 @@ function GameResult({
       "Game Result neither resulted in Robot X wins nor Robot Y wins"
     );
   }
-  return <p className="text-white text-xl md:text-lg">{result}</p>;
+  return (
+    <>
+      <p className="text-white text-xl md:text-lg">{result}</p>;
+      {result !== "Draw!" && (
+        <ConfettiExplosion particleCount={30} particleSize={3} />
+      )}
+    </>
+  );
 }
