@@ -30,7 +30,7 @@ export function GameResult({
   }
   return (
     <>
-      <p className="text-white text-xl md:text-base">{result}</p>
+      <p className="text-orange-500 text-xl md:text-base">{result}</p>
       {result !== "Draw!" && result !== "Robot wins!" && (
         <ConfettiExplosion particleCount={30} particleSize={3} />
       )}

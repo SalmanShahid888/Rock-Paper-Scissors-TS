@@ -27,7 +27,7 @@ const MultiPlayerStartGame: FC<MultiPlayerStartGameProps> = ({
 
   return (
     <>
-      <div className="flex md:flex-row flex-col md:gap-40 gap-10 justify-center items-center md:mt-20 mt-10">
+      <div className="flex md:flex-row flex-col md:gap-40 gap-5 justify-center items-center md:mt-20 mt-10">
         <div className="flex flex-col justify-between items-center gap-5 md:gap-0">
           <h2 className="text-white font-black md:text-3xl text-xl font-dmSans">
             Player One picked
@@ -94,7 +94,7 @@ function GameResult({
   }
   return (
     <>
-      <p className="text-white text-xl md:text-lg">{result}</p>;
+      <p className="text-orange-500 text-xl md:text-base">{result}</p>
       {result !== "Draw!" && (
         <ConfettiExplosion particleCount={30} particleSize={3} />
       )}
